@@ -1,0 +1,7 @@
+{
+  "name": "mc-bot",
+  "private": true,
+  "dependencies": {
+    "mineflayer": "^4.23.0"
+  }
+}

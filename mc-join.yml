@@ -1,0 +1,26 @@
+name: Join Minecraft Server
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+
+jobs:
+  join:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm install
+      - run: node bot.js
+        env:
+          MC_HOST: ${{ secrets.MC_HOST }}
+          MC_PORT: ${{ secrets.MC_PORT }}
+          MC_PASSWORD: ${{ secrets.MC_PASSWORD }}
+          MC_USERNAME: ${{ vars.MC_USERNAME || 'ActionsBot' }}
+          MC_VERSION: ${{ vars.MC_VERSION }}
+          DURATION_SEC: '3'
