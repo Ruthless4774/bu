@@ -7,7 +7,7 @@ const {
   MC_HOST,
   MC_PORT = '25565',
   MC_USERNAME = 'ActionsBot',
-  MC_VERSION = 26.1,
+  MC_VERSION = 1.21.11,
   MC_PASSWORD,            // optional: AuthMe-style /login (keep in secrets)
   DURATION_SEC = '3',     // seconds to stay after spawning
   DEBUG,                  // set to "1" to print kick reasons / error messages
