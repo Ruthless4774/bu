@@ -23,3 +23,4 @@ jobs:
           MC_USERNAME: ${{ vars.MC_USERNAME || 'ActionsBot' }}
           MC_VERSION: ${{ vars.MC_VERSION }}
           DURATION_SEC: '3'
+          DEBUG: '1'
